@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DnD Dice Online</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Dungeons and Dragons Dice Roller</h1>
+    <img
+      src="https://th.bing.com/th/id/OIP.D5RYyiVH7wNgdPZcPf_QkQHaFg?w=258&h=192&c=7&r=0&o=5&cb=iwc2&dpr=1.3&pid=1.7"
+    />
+    <br />
+    <button id="20" onclick="twozero()">Roll d20</button>
+    <button id="12" onclick="onetwo()">Roll d12</button>
+    <button id="10" onclick="oneten()">Roll d10</button>
+    <button id="8" onclick="zeroeight()">Roll d8</button>
+    <button id="6" onclick="zerosix()">Roll d6</button>
+    <button id="4" onclick="zerofour()">Roll d4</button>
+
+    <h1 id="box">Your Number Appears Here</h1>
+
+    <script>
+      function twozero() {
+        const twenty = Math.floor(Math.random() * 20) + 1;
+        let box = document.getElementById("box");
+        box.textContent = twenty;
+      }
+
+      function onetwo() {
+        const twelve = Math.floor(Math.random() * 12) + 1;
+        let box = document.getElementById("box");
+        box.textContent = twelve;
+      }
+
+      function oneten() {
+        const ten = Math.floor(Math.random() * 10) + 1;
+        let box = document.getElementById("box");
+        box.textContent = ten;
+      }
+
+      function zeroeight() {
+        const eight = Math.floor(Math.random() * 8) + 1;
+        let box = document.getElementById("box");
+        box.textContent = eight;
+      }
+
+      function zerosix() {
+        const six = Math.floor(Math.random() * 6) + 1;
+        let box = document.getElementById("box");
+        box.textContent = six;
+      }
+
+      function zerofour() {
+        const four = Math.floor(Math.random() * 4) + 1;
+        let box = document.getElementById("box");
+        box.textContent = four;
+      }
+    </script>
+
+    <audio
+      id="rollSound"
+      src="https://dl.prokerala.com/downloads/ringtones/files/mp3/game-of-thrones-theme-song-ringtone-30782.mp3"
+    ></audio>
+    <button onclick="playSound()">Play Theme</button>
+    <script>
+      function playSound() {
+        let audio = document.getElementById("rollSound");
+        audio.play();
+      }
+    </script>
+  </body>
+</html>
